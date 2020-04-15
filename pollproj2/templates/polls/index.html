@@ -2,10 +2,12 @@
 
 {% block content %}
 <h2> List of {{title}}</h2>
-    {% if {{question}} %}
+    {% if question %}
         <ul>
             {% for q in question %}
-                <li>{{q.title}}</li>
+                <li>
+                    <a href="/poll/{{q.id}}/details/">{{q.title}}</a>
+                </li>
             {% endfor %}
         </ul>
     {% else %}
